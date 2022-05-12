@@ -11,7 +11,7 @@ WORKDIR /mayhem-cmake-example
 
 ## TODO: ADD YOUR BUILD INSTRUCTIONS HERE.
 RUN cmake -D CMAKE_C_COMPILER=clang -D CMAKE_CXX_COMPILER=clang++ .
-RUN make
+RUN CC=clang CXX=clang++ make
 
 # Package Stage
 FROM --platform=linux/amd64 ubuntu:20.04
